@@ -1,0 +1,501 @@
+body{
+	background-image:url('forest2.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+	font-family: Helvetica;
+}
+
+#lang_switcher{
+	display: inline;
+	float: right;
+	margin-right: 1%;
+	text-shadow: 0px 0px 25px white;
+}
+
+	#lang_switcher a {text-decoration: none;}
+	#lang_switcher a:link {color: rgba(76, 78, 68, 0.6)}      /* unvisited link */
+	#lang_switcher a:visited {color: rgba(76, 78, 68, 0.6)}  /* mouse over link */
+	#lang_switcher a:hover {
+		color: rgba(86, 128, 82, 1.1);
+		background-color: rgba(86, 128, 82, 0.3);
+		text-shadow: 3px 3px 15px #568052;
+		box-shadow: 3px 3px 50px 3px #568052;
+}
+		
+#server_remark{
+	display: inline-block;
+	width: 40%;
+	height: 1px;
+	margin-left: 30%;
+	margin-top: 10px;
+	text-align: center;
+	font-size: 16pt;
+	color: #F02424;
+	text-shadow: 0px 0px 25px white;
+	}
+		
+#box{
+	border-radius: 30%;
+	margin:3.7% 30% 0% 30%;
+	position: absolute;
+	height:550px;
+	width:40%;
+	border-radius: 5px;
+	background: rgba(31,42,35,0.6);
+	box-shadow: 3px 3px 50px black;
+}
+
+.left{
+	position: relative;
+	display: inline-block;
+	float:left;
+	height:70%;
+	width:50%;
+}
+
+.right{
+	position: relative;
+	display: inline-block;
+	float:right;
+	height:70%;
+	width:48%;
+}
+
+.group { 
+	display: inline-block;
+	position: relative;
+	margin-left: 40px;
+	margin-top: 20px;
+	margin-bottom: 8px;
+}
+
+.right_group {
+
+	display: inline-block;
+	position: relative;
+	margin-left: 10px;
+	margin-top: 3px;
+	margin-bottom: 25px;
+}
+
+.asterisk {
+	color: red;
+	display: inline;
+}
+
+input {
+	font-size: 17px;
+	text-shadow: 4px 4px 30px black;
+	color: white;
+	padding: 10px;
+	display: inline-block;
+	width: 85%;
+	border: none;
+	border-bottom: 1px solid #ccc;
+	background: rgba(31,42,35,0);
+}
+
+input:focus {
+	outline: none;
+}
+
+label {
+	color: #999999;
+	text-shadow: 5px 5px 30px black;
+	font-size: 16px;
+	position: absolute;
+	pointer-events: none;
+	left: 7px;
+	top: 15px;
+	transition: 0.4s ease all;
+	-moz-transition: 0.4s ease all;
+	-webkit-transition: 0.4s ease all;
+}
+
+input:focus ~ label, input:valid ~ label {
+	top: -10px;
+	font-size: 14px;
+	color: #568052 ;
+}
+	
+.bar {
+	position: relative;
+	display: block;
+	width: 85%;
+}
+
+.bar:before, .bar:after {
+	content: "";
+	height: 2px;
+	width: 0;
+	bottom: 0;
+	position: absolute;
+	background: #568052;
+	transition: 0.3s ease all;
+	-moz-transition: 0.3s ease all;
+	-webkit-transition: 0.3s ease all;
+}
+
+.bar:before {
+	left: 50%;
+}
+
+.bar:after {
+	right: 50%;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after{
+	width: 50%;
+}
+
+#login_link {
+	font-size: 19px;
+	text-shadow: 4px 4px 8px black;
+	width: 30%;
+	text-align: center;
+	display: inline-block;
+	margin: 8% 0% 3% 10%;
+}
+
+	.login_link_in a {text-decoration: none;}
+	.login_link_in a:link {color: #999999;}      /* unvisited link */
+	.login_link_in a:visited {color: #999999;}  /* mouse over link */
+	.login_link_in a:hover {
+		color: #568052;
+		background-color: rgba(86, 128, 82, 0.2);
+		box-shadow: 0px 0px 50px #568052;
+}
+
+#signup_link {
+	font-size: 19px;
+	text-shadow: 4px 4px 8px black;
+	width: 30%;
+	text-align: center;
+	display: inline-block;
+	margin: 8% 0% 2% 13%;
+	color: #999999;
+	text-decoration: underline;
+	text-underline-position: under;
+}
+
+button {
+	cursor: pointer;
+	float: left;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 15px;
+	text-align: center;
+	color: #B6B6B6;
+	padding-top: 3px;
+	width: 60%;
+	height: 35px;
+	border: none;
+	border-radius: 5px;
+	margin-top: 7px;
+	margin-left: 20%;
+	background: rgba(31,42,35,0.4);
+	box-shadow: 4px 4px 30px black;
+}
+
+button:hover {
+	cursor: pointer; 
+	color: #568052;
+	border: 1px solid #568052;
+	box-shadow: inset 0 0 0 3px #568052;
+	box-shadow: 0px 0px 30px 5px #568052;
+}
+	
+.disable:hover {
+	cursor: not-allowed;
+	color: #6E6E6E; 
+	border: none;
+	box-shadow: inset 0 0 0 3px black;
+	box-shadow: 4px 4px 30px black;
+}
+	
+button:active, button:focus {
+	color: #568052;
+	border: 1px solid #568052;
+	box-shadow: inset 0 0 0 3px #568052;
+	box-shadow: 0px 0px 30px 5px #568052;
+	outline: none !important; 
+}
+	
+button::-moz-focus-inner {
+	color: #568052;
+	border: 1px solid #568052;
+	box-shadow: inset 0 0 0 3px #568052;
+	box-shadow: 0px 0px 30px 5px #568052;
+}
+	
+.disable:active, .disable:focus {
+	border: none;
+	box-shadow: 4px 4px 30px black;
+	outline: none !important; 
+}
+	
+.disable::-moz-focus-inner {
+	border: none;
+	box-shadow: inset 0 0 0 3px #568052;
+	box-shadow: 0px 0px 30px 5px #568052;
+}
+	
+.file-form-wrap {
+	position: relative;
+	display: inline-block;
+	position: relative;
+	margin-top: 20px;
+	margin-bottom: 12px;
+	margin-left: 35px;
+	height: 160px;
+	width: 160px;
+	}
+	
+.file-upload input[type="file"]{ 
+	display: none;/* скрываем input file */ 
+} 
+
+.file-upload { 
+	position: relative; 
+	overflow: hidden; 
+	width: 150px;
+	height:20px;
+	line-height:17px; 
+	cursor: pointer;
+	float: left;
+	margin-bottom:10px;
+	margin-left: 15%;
+	text-transform: uppercase;
+	font-size: 8px;
+	text-align: center;
+	color: #B6B6B6;
+	paddingadding-top: 3px;
+	border: none;
+	border-radius: 5px;
+	background: rgba(31,42,35,0.4);
+	box-shadow: 0px 0px 24px 1px black;			
+} 
+		
+.file-upload:hover {
+	color: #568052;
+	box-shadow: inset 0 0 0 3px #568052;
+	box-shadow: 0px 0px 30px 5px #568052;
+}
+		
+.file-upload label { 
+	pointer-events: auto;
+	display: inline-block; 
+	position: relative; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	cursor: pointer; 
+} 
+
+.preview-img{ 
+	max-width:160px; 
+	max-height:160px;
+}
+
+#image_remark_ru, #image_remark_eng{
+	width: 90%;
+	text-align: center;
+	margin-bottom:10px;
+	color: red;
+	font-size: 9.5pt;
+}
+
+.valid {
+	display: block;
+	width: 5px;
+	color: #568052;
+	float: right;  
+	margin-top: 7px;
+	margin-right: 7%;
+	font-size: 14pt;
+}
+
+.remark {
+	color: white;
+	font-size: 9.5pt;
+}
+
+@media screen and (min-width: 2400px) {
+	#box{
+		width:30%;
+		margin: 19% 35% 9% 35%;
+		height: 35%;
+		padding-top: 40px;
+	}
+	button{
+		margin-top: 40px;
+	}
+}
+
+
+@media screen and (max-width: 1440px) {
+	#box{
+		width:40%;
+		margin:3.7% 30% 0% 30%;
+
+	}
+}
+
+
+@media screen and (max-width: 1200px) {
+	#box{
+		width:50%;
+		margin:3.7% 25% 0% 25%;
+
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	#box{
+		width:56%;
+		margin:5% 22% 0% 22%;
+
+	}
+}
+
+
+@media screen and (max-width: 768px) {
+	#box{
+		width:70%;
+		margin:6% 15% 0% 15%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	#box{
+		width:80%;
+		margin:7% 10% 0% 10%;
+	}
+}
+
+@media screen and (max-width: 540px) {
+	#box{
+	margin:8% 15% 0% 15%;
+	position: absolute;
+	width:70%;
+	height: 950px;
+	border-radius: 3px;
+	background: rgba(31,42,35,0.6);
+	box-shadow: 3px 3px 50px black;
+}
+
+.left{
+	position: relative;
+	display: inline;
+	float:left;
+	height:350px;
+	width:100%;
+}
+
+.right{
+	position: relative;
+	display: inline;
+	float:left;
+	height:390px;
+	width:100%;
+}
+
+.group { 
+	display: inline-block;
+	position: relative;
+	margin-left: 15%;
+	margin-top: 20px;
+	margin-bottom: 8px;
+}
+
+.right_group {
+
+	display: inline-block;
+	position: relative;
+	margin-left: 15%;
+	margin-top: 3px;
+	margin-bottom: 25px;
+}
+.file-form-wrap {
+	margin-top: 20px;
+	margin-bottom: 12px;
+	margin-left: 20%;
+}
+.file-upload {
+	margin-left: 20%;
+}
+}
+
+@media screen and (max-width: 480px) {
+	#box{
+	width:80%;
+	margin:15% 10% 5% 9%;
+	}
+	.file-form-wrap {
+	width: 60%;
+	margin: 20% 20% 5% 23%;
+	
+	}
+	.file-upload {
+		width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	}
+	button{
+		margin-top: 60px;
+	}
+	.right_group {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	}
+	#phone_remark_eng{
+		margin-bottom:40px;
+		display: inline;
+	}
+	#signup_link{
+		font-size:16px;
+		margin-top: 14%;
+		margin-left: 7%;
+	}
+	
+	#login_link{
+		font-size:16px;
+		margin-top: 14%;
+	}
+/*	#lang_switcher{
+		width: 50%;
+		margin-left:25%;
+		margin-right:25%;
+		text-align: center;
+	}
+	#server_remark{
+		display: inline;
+		width: 80%;
+		height: 1px;
+		margin-left: 10%;
+		margin-top: 50px;
+		font-size: 16pt;
+	}*/
+	#lang_switcher{
+		display: inline;
+		width: 50%;
+		margin-left:25%;
+		margin-right:25%;
+		margin-top:0px;
+		text-align: center;
+	}
+	#server_remark{
+		display: inline-block;
+		width: 80%;
+		height: 1px;
+		margin-left: 10%;
+		margin-top: 45px;
+		font-size: 16px;
+	}
+		
+}
+ 
