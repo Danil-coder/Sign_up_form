@@ -32,7 +32,7 @@
 	// Displaying the user photo
 	
 	if ($user_data['image'] !== null) $avatar = $user_data['image'];
-	else ($avatar = "photo.jpg");
+	else ($avatar = "def_images/photo.jpg");
 	
 	
 ?>

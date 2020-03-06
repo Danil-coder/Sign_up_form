@@ -1,11 +1,9 @@
-function getFileParam() { 			
+function image_upload() { 			
 	try { 				
 		var file = document.getElementById('uploaded-file1').files[0];
 		
-			if (file) { 					
-				var fileSize = 0; 					
-				
-				// Checking image size 
+			if (file) { 									
+				// Checking image size (max - 5 MB):
 				if (file.size > 5242880) {
 					
 					// Displaying the notification. Only one of these elements exists (either #image_remark_ru, or #image_remark_eng, depending on the selected language)
@@ -17,11 +15,13 @@ function getFileParam() {
 				// Getting the image format:
 				if (/\.(jpe?g|gif|png)$/i.test(file.name)) {
 					
-					// Creating the image preview:
-					var elPreview = document.getElementById('preview1');
-					elPreview.innerHTML = '';
-					var newImg = document.createElement('img');
-					newImg.className = "preview-img";
+					// Preparation the image preview:
+					var image_preview = document.getElementById('preview1');
+					image_preview.innerHTML = '';
+					var new_image = document.createElement('img');
+					new_image.className = "preview-img";
+					
+					// Removal the notification.
 					$('#image_remark_ru').text('');
 					$('#image_remark_eng').text('');
 					
@@ -29,11 +29,8 @@ function getFileParam() {
 						
 						if (file.getAsDataURL().substr(0,11)=='data:image/') {
 							
-							newImg.onload=function() {
-								document.getElementById('file-name1').innerHTML+=' ('+newImg.naturalWidth+'x'+newImg.naturalHeight+' px)';
-							}
-							newImg.setAttribute('src',file.getAsDataURL());
-							elPreview.appendChild(newImg);								
+							new_image.setAttribute('src',file.getAsDataURL());
+							image_preview.appendChild(new_image);								
 						}
 					}
 
@@ -42,12 +39,9 @@ function getFileParam() {
 						reader.onloadend = function(evt) {
 							
 							if (evt.target.readyState == FileReader.DONE) {
-								newImg.onload=function() {
-									document.getElementById('file-name1').innerHTML+=' ('+newImg.naturalWidth+'x'+newImg.naturalHeight+' px)';
-								}
-							
-								newImg.setAttribute('src', evt.target.result);
-								elPreview.appendChild(newImg);
+								
+								new_image.setAttribute('src', evt.target.result);
+								image_preview.appendChild(new_image);
 							}
 						};
 						

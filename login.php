@@ -93,6 +93,7 @@
 		<link href="login_page.css" rel="stylesheet" type="text/css"/>
 		<!--Sets the width of the mobile device screen-->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="height=device-height, initial-scale=1">
 	</head>
 
 	<body>

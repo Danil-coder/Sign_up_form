@@ -232,7 +232,7 @@
 				
 					<div class="right">
 						<span class="file-form-wrap">
-							<div id="preview1"><img src="defoult_photo.png" height="150px"></div>
+							<div id="preview1"><img src="def_images/defoult_photo.png" height="150px"></div>
 						</span>
 						
 						<?php if($lang == 'ru') echo "<div id='image_remark_ru'></div>";
@@ -240,7 +240,7 @@
 
 						<div class="file-upload">
 							<label>
-								<input id="uploaded-file1" type="file" name="image" onchange="getFileParam();" />
+								<input id="uploaded-file1" type="file" name="image" onchange="image_upload();" />
 								<span><?=$parse_lang[$lang]['select_image']?></span><br />
 							</label>
 						</div>
