@@ -25,4 +25,4 @@ Design responsiveness is provided by both elements of fluid layout (using relati
 
 Example
 -----------------------------------
-The working version of this form can be found at: [https://spacyfox.gq/signup.php]
+The working version of this form can be found [here] (https://spacyfox.gq/signup.php)
